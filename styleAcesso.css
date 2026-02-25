@@ -1,0 +1,31 @@
+/*Tela de Acesso*/
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25vh;
+    
+    font-family:sans-serif;
+    background:linear-gradient(to right,
+    rgb(5, 0, 29),
+    rgb(10, 0, 36),
+    rgb(24, 0, 88),
+    rgb(24, 0, 88))
+}
+.TelaAcesso h1{
+    color: white;
+    text-align: center;
+}
+
+.TelaAcesso button{
+     width: 100%;
+        
+        background-color: rgb(41, 98, 112);
+        color:rgb(255, 255, 255);
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s;
+        margin: 5px;
+}
