@@ -1,0 +1,73 @@
+body{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    font-family:sans-serif;
+    background:linear-gradient(to right,
+    rgb(5, 0, 29),
+    rgb(10, 0, 36),
+    rgb(24, 0, 88),
+    rgb(24, 0, 88))
+}
+
+section{
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 20vh;
+}
+
+/*Sumario do curso*/
+.sumario h1,h2{
+    font-size: 30px;
+    color: white;
+}
+.sumario p{
+    color: lightblue
+}
+
+/* Formulario de entrada*/
+.form_box{
+    background-color: rgb(rgb(6, 6, 12));
+    padding: 30px;
+    border-radius: 16px;
+    width: 250px;
+    border: 1px solid #100131;
+    box-shadow: 0 2px 6px rgba(12, 7, 37, 0.5);
+}
+    .form_box h2{
+        color: white;
+        text-align: center;
+    }
+    .form_box p{
+        color: aliceblue;
+        margin: 0;
+    }
+    
+    .form_box input{
+        width:93%;
+        padding: 14px;
+        margin-top: 8px;
+        background-color: rgb(11, 8, 70);
+        border: 1px solid rgb(34, 1, 82);
+        border-radius: 12px;
+        color:rgb(255, 255, 255);
+        outline:none;
+        transition: border-color 0,3s ease;
+    }
+    input:focus{
+        border-color: rgb(41, 98, 112);
+    }
+    
+    .form_box button{
+        width: 100%;
+        
+        background-color: rgb(41, 98, 112);
+        color:rgb(255, 255, 255);
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s;
+        margin: 5px;
+    }
