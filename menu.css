@@ -1,0 +1,102 @@
+body{
+    align-items: center;
+    font-family:sans-serif;
+    background:linear-gradient(to right, rgb(5, 0, 29),rgb(10, 0, 36),rgb(24, 0, 88),rgb(24, 0, 88))
+}
+
+section{
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 10vh;
+}
+
+/*Sumario do curso*/
+.titulo{
+    font-size: 30px;
+    color: white;
+    text-align: center;
+}
+.curso{
+    color: white;    
+}
+
+.titulo-principal{
+    text-align: left;
+    color: white;
+}
+
+.card-curso {
+    padding: 20px;
+    border-radius: 12px;
+    margin-left: 0;
+    margin-right: auto;
+    width: 600px;
+    transition: transform 0.2s; /* Efeito de zoom ao passar o mouse */
+    cursor: pointer;
+    background-color: #191970;
+}
+
+.card-curso:hover {
+    transform: scale(1.02);
+}
+
+.progresso-container {
+    background: #eee;
+    height: 8px;
+    border-radius: 4px;
+    margin: 15px 0 5px 0;
+}
+
+.progresso-barra {
+    background: #483D8B;
+    height: 100%;
+    border-radius: 4px;
+}
+
+.porcentagem {
+    font-size: 12px;
+    color: #ffffff;
+}
+
+.tag_ultima_aula {
+    color: white;
+    background-color: #483D8B;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.status_da_aula{
+    color: #A9A9A9;
+    font-size: 12px;
+}
+
+.curso-dois{
+    color: white;
+    background-color: #191970;
+    border-radius: 8px;
+    padding: 40px;
+    text-align: center;
+    transition: transform 0.2s; /* Efeito de zoom ao passar o mouse */
+    cursor: pointer;
+}
+
+.curso-dois:hover{
+    transform: scale(1.02);
+    border-color:#00ff08;
+}
+
+.caixa-de-cursos{
+    display: flex;       /* Ativa o alinhamento em linha */
+    flex-direction: row; /* Garante que os filhos fiquem na horizontal */
+    gap: 20px;          /* Cria um espaço entre os cards */
+    justify-content: center; /* Alinha os cards à esquerda */
+    flex-wrap: wrap;
+
+}
+
+.logo-card {
+    width: 80px;      /* Largura da imagem */
+    height: auto;     /* Mantém a proporção correta */
+    border-radius: 50%; /* Se quiser que a logo fique redondinha */
+    margin-bottom: 15px;
+}
