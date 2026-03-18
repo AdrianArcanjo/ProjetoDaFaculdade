@@ -1,0 +1,178 @@
+/* RESET: remove espaçamentos padrão do navegador */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+/* FUNDO DO SITE */
+body {
+  background: #05060f;
+  color: white;
+
+}
+
+/* HEADER (parte de cima) */
+.header{
+  display: flex; /* coloca itens lado a lado */
+  justify-content: space-between; /* separa esquerda/direita */
+  align-items: center;
+  padding: 15px 30px; /* AJUSTE: padding mais equilibrado */
+}
+
+/* LINKS DO MENU (ATIVIDADES/HOME/AULAS) */
+.links{
+  display: flex;
+  align-items: center;
+  gap: 25px; /* espaço entre itens */
+}
+
+/* LINKS */
+.link{
+  color: #cbd5e1; /* AJUSTE: cor mais suave */
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+/* EFEITO HOVER */
+.link:hover{
+  color: white;
+}
+
+/* PROGRESSO */
+.progress{
+  background: #0f2d1f;
+  padding: 6px 18px; /* AJUSTE: proporção melhor */
+  border-radius: 100px;
+  color: #00ff88;
+  font-size: 13px;
+}
+
+/* CONTAINER PRINCIPAL */
+.container{
+  display: flex; /* SIDEBAR + CONTEÚDO lado a lado */
+  height: calc(100vh - 70px); /* AJUSTE: altura correta */
+  padding: 10px 20px; /* AJUSTE: respiro lateral */
+  gap: 20px; /* AJUSTE: espaço entre sidebar e conteúdo */
+}
+
+/* SIDEBAR */
+.sidebar{
+  width: 300px; /* AJUSTE: menor e mais proporcional */
+  background: #0b1020; /* AJUSTE: cor mais fiel */
+  padding: 20px 15px;
+  border-radius: 20px; /* AJUSTE: bordas arredondadas */
+  display: flex;  
+  flex-direction: column;  
+}
+
+/* TÍTULOS */
+.section-title{
+  font-size: 14px;  
+  color: #8b92a5;  
+  margin: 10px 10px 15px;
+}
+
+/* NAVBAR AULAS (Conteúdo)*/
+.aula{
+  padding: 14px;  
+  border-radius: 16px;
+  cursor: pointer;
+  margin-bottom: 10px;  
+  transition: 0.2s;
+}
+
+/* HOVER */
+.aula:hover{
+  background: #1a2035;
+}
+
+/* AULA ATIVA (selecionada) */
+.aula.ativa{
+  background: linear-gradient(90deg, #6c63ff, #8b5cf6);  
+}
+
+/* TEXTO + TEMPO */
+.aula div{
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;  
+}
+
+/* CONTEÚDO DIREITA */
+.content{
+  flex: 1; /* ocupa o resto da tela */
+  padding: 20px 10px; 
+  display: flex; 
+  flex-direction: column; 
+}
+
+/* BOTÕES DE ABA */
+.tabs{
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px; 
+}
+
+/* BOTÕES (Videoaula/Flashcards)*/
+.tabs button{
+  padding: 10px 25px;  
+  border: none;
+  border-radius: 20px;
+  background: #11162a;  
+  color: #cbd5e1;  
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/* HOVER */
+.tabs button:hover{
+  background: #1f2a44;  
+  color: white;
+}
+
+/* PLAYER (CAIXA DO VÍDEO) */
+.player{
+  background: #0b1020; 
+  padding: 20px;
+  border-radius: 30px; 
+  display: flex; 
+  justify-content: center; 
+}
+
+/* VÍDEO RESPONSIVO */
+.player iframe{
+  width: 100%; 
+  max-width: 900px; 
+  height: 480px; 
+  border-radius: 20px; 
+}
+
+/* BOTÃO CONCLUIR */
+.acoes{
+  margin-top: 20px; 
+}
+
+.acoes button{
+  padding: 12px 22px; 
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #6c63ff, #8b5cf6); 
+  color: white;
+  cursor: pointer;
+  transition: 0.2s; 
+}
+
+/* HOVER BOTÃO */
+.acoes button:hover{
+  opacity: 0.9; 
+}
+
+/* FLASHCARD */
+.flashcard{
+  background: #0b1020; 
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 20px;
+}
