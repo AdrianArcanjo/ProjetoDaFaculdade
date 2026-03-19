@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Curso</title>
+    <title>Curso Git e GitHub</title>
 
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
@@ -67,10 +67,12 @@
       <main class="content">
         <!-- TABS -->
         <div class="tabs">
-          <button class="active" onclick="mostrarTab('video')">
+          <button class="active" data-tab="video" onclick="mostrarTab('video')">
             ▶ Videoaula
           </button>
-          <button onclick="mostrarTab('flashcards')">📚 Flashcards</button>
+          <button data-tab="flashcards" onclick="mostrarTab('flashcards')">
+            📚 Flashcards
+          </button>
         </div>
 
         <!-- ÁREA DO VÍDEO -->
@@ -79,30 +81,53 @@
             <!-- ALTERADO: removi height fixo do HTML (CSS controla melhor) -->
             <iframe
               id="player"
-              src="https://www.youtube.com/embed/6Czd1Yetaac"
+              src="https://www.youtube.com/embed/6Czd1Yetaac?enablejsapi=1"
               frameborder="0"
-              allow="autoplay; encrypted-media"
+              allow="autoplay; encrypted-media; picture-in-picture"
               allowfullscreen
             >
             </iframe>
           </div>
         </div>
 
-        <!-- ALTERADO: estilização futura -->
+        <!-- botão de concluir aula -->
         <div class="acoes">
-          <button onclick="concluirAula()">Concluir Aula</button>
+          <button id="concluirAula" onclick="concluirAula()">
+            Concluir Aula
+          </button>
+        </div>
+
+        <!-- CAPÍTULOS (timestamps) -->
+        <div class="chapters">
+          <ul id="chaptersList"></ul>
         </div>
 
         <!-- FLASHCARDS -->
         <div id="flashcards" style="display: none">
-          <div class="flashcard">
-            <h2>Flashcards</h2>
-            <p>Git é um sistema de controle de versão.</p>
+          <div class="flashcard-container">
+            <div class="card" id="flashcard">
+              <div class="inner">
+                <div class="front">
+                  <h2 id="flashcard-question">Flashcards</h2>
+                </div>
+                <div class="back">
+                  <p id="flashcard-answer">Toque para virar</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flashcard-controls">
+            <button id="prevFlashcard" onclick="prevFlashcard()">←</button>
+            <span id="flashcardCounter">0 / 0</span>
+            <button id="nextFlashcard" onclick="nextFlashcard()">→</button>
+            <button id="flipFlashcard" onclick="flipFlashcard()">Virar</button>
           </div>
         </div>
       </main>
     </div>
 
     <script src="tela03.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
   </body>
 </html>
