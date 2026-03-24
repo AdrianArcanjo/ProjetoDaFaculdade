@@ -155,7 +155,7 @@ function renderFlashcard(index) {
     !questionEl ||
     !answerEl ||
     !counterEl ||
-    !prevButton ||
+      !prevButton ||
     !nextButton ||
     !card
   )
