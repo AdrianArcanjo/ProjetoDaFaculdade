@@ -66,11 +66,60 @@ body {
   flex-direction: column;
 }
 
-/* TÍTULOS */
-.section-title {
+/* ACORDEÃO */
+.accordion-section {
+  margin-bottom: 15px;
+}
+
+.accordion-header {
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: #11162a;
+  color: #cbd5e1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-size: 14px;
-  color: #8b92a5;
-  margin: 10px 10px 15px;
+  font-weight: 500;
+  transition: 0.2s;
+  user-select: none;
+}
+
+.accordion-header:hover {
+  background: #1a2035;
+  color: white;
+}
+
+.accordion-toggle {
+  display: inline-block;
+  transition: transform 0.3s ease;
+  font-size: 12px;
+}
+
+.accordion-header.collapsed .accordion-toggle {
+  transform: rotate(-90deg);
+}
+
+.accordion-content {
+  max-height: 1000px;
+  overflow: hidden;
+  transition:
+    max-height 0.3s ease,
+    opacity 0.3s ease;
+  opacity: 1;
+  padding: 8px 0;
+}
+
+.accordion-header.collapsed + .accordion-content {
+  max-height: 0;
+  opacity: 0;
+  padding: 0;
+}
+
+/* TÍTULO */
+.section-title {
+  display: none;
 }
 
 /* NAVBAR AULAS (Conteúdo)*/
@@ -87,7 +136,7 @@ body {
   background: #1a2035;
 }
 
-/* AULA ATIVA (selecionada) */
+/* AULA ATIVA */
 .aula.ativa {
   background: linear-gradient(90deg, #6c63ff, #8b5cf6);
 }
@@ -141,11 +190,12 @@ body {
 .player {
   background: #0b1020;
   padding: 20px;
-  border-radius: 30px;
+  border-radius: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 18px;
+  align-items: center;
+  gap: 19px;
 }
 
 /* CAPÍTULOS (TIMESTAMPS) */
@@ -263,7 +313,7 @@ body {
   justify-content: center;
   padding: 20px;
   border-radius: 20px;
-  background: #0b1020;
+  background: #825EF8;
 }
 
 .back {

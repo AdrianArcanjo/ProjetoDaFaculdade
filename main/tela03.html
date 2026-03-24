@@ -35,30 +35,42 @@
     <div class="container">
       <!-- SIDEBAR -->
       <aside class="sidebar">
-        <div class="section-title">Curso Git e GitHub</div>
-        <div class="section-title">Introdução ao curso</div>
+        <!-- SEÇÃO VIDEO GITHUB -->
+        <div class="accordion-section">
+          <div class="accordion-header" onclick="toggleAccordion(this)">
+            <span class="accordion-toggle">▼</span>
+            Introdução ao curso
+          </div>
+          <div class="accordion-content">
+            <div class="aula ativa" onclick="trocarVideo('video1', event)">
+              <div>
+                O que é o GitHub?
+                <span>10:24</span>
+              </div>
+            </div>
 
-        <!-- adicionei div interna pra alinhar texto + tempo -->
-        <div class="aula ativa" onclick="trocarVideo('video1', event)">
-          <div>
-            O que é o GitHub?
-            <span>10:24</span>
+            <div class="aula" onclick="trocarVideo('video2', event)">
+              <div>
+                Como usar o GitHub Desktop
+                <span>15:30</span>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="aula" onclick="trocarVideo('video2', event)">
-          <div>
-            Como usar o GitHub Desktop
-            <span>15:30</span>
+        <!-- SEÇÃO VIDEO GIT BASH -->
+        <div class="accordion-section">
+          <div class="accordion-header" onclick="toggleAccordion(this)">
+            <span class="accordion-toggle">▼</span>
+            O que é Git bash?
           </div>
-        </div>
-
-        <div class="section-title">Como criar ramificações</div>
-
-        <div class="aula" onclick="trocarVideo('video3', event)">
-          <div>
-            Como criar uma branch
-            <span>22:15</span>
+          <div class="accordion-content">
+            <div class="aula" onclick="trocarVideo('video3', event)">
+              <div>
+                introdução ao Git bash
+                <span>22:15</span>
+              </div>
+            </div>
           </div>
         </div>
       </aside>

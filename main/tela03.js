@@ -1,5 +1,10 @@
 // Alterna entre Video e Flashcards (e controla o player do YouTube)
 
+// FUNÇ~AO DO ACCORDEÃO
+function toggleAccordion(header) {
+  header.classList.toggle("collapsed");
+}
+
 // CAPÍTULOS (timestamps) - usado para navegar no vídeo
 const chapters = [
   { time: 0, title: "Introdução" },
@@ -155,7 +160,7 @@ function renderFlashcard(index) {
     !questionEl ||
     !answerEl ||
     !counterEl ||
-      !prevButton ||
+    !prevButton ||
     !nextButton ||
     !card
   )
