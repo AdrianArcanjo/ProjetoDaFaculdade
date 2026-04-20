@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LearnFlow – Menu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+ 
+  <!-- Navbar -->
+  <nav>
+    <a href="#" class="logo">
+      <div class="logo-icon">L</div>
+      <span class="logo-text">LearnFlow</span>
+    </a>
+    <div class="nav-center">
+      <div class="search-wrap">
+        <span class="search-icon">🔍</span>
+        <input type="text" placeholder="Buscar cursos, aulas ou tópicos...">
+      </div>
+    </div>
+    <div class="nav-right">
+      <div class="nav-bell">🔔</div>
+      <div class="nav-avatar">ES</div>
+    </div>
+  </nav>
+ 
+  <main>
+    <!-- Top row -->
+    <div class="top-row">
+      <div class="greeting">
+        <h1>Olá, Estudante 👋</h1>
+        <p>Continue de onde você parou.</p>
+      </div>
+      <div class="stats">
+        <div class="stat-card">
+          <div class="stat-label">Cursos em progresso</div>
+          <div class="stat-value">4</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Horas estudadas</div>
+          <div class="stat-value">12.5h</div>
+        </div>
+      </div>
+    </div>
+ 
+    <!-- Last lesson banner -->
+    <div class="banner" onclick="window.location.href='../Aulas/aulas.html'">
+      <div class="banner-left">
+        <div class="banner-tag"><span class="dot"></span> ÚLTIMA AULA</div>
+        <div class="banner-module">Módulo 1 • Aula 2</div>
+        <h2>GITHUB do básico ao avançado</h2>
+        <p class="banner-desc">Aprenda a estruturar seus trabalhos e centralizá-los no GitHub.</p>
+        <div class="progress-bar-wrap">
+          <div class="progress-bar-fill" style="width: 70%"></div>
+        </div>
+      </div>
+      <button class="btn-continue">
+        ▶ Continuar Assistindo
+      </button>
+    </div>
+ 
+    <!-- Available courses -->
+    <div class="section-header">
+      <h2>Cursos Disponíveis</h2>
+      <a href="#" class="see-all">Ver todos →</a>
+    </div>
+ 
+    <div class="courses-grid">
+      <a href="/Aulas/aulas.html" class="course-card">
+        <div class="course-thumb git">🐙</div>
+        <div class="course-body">
+          <span class="course-tag">Versionamento</span>
+          <h3>Como funciona o Git e GitHub</h3>
+          <p>Domine o controle de versões e colabore em projetos reais.</p>
+          <div class="course-meta">
+            <span>📹 4 aulas</span>
+            <span>⏱ 48 min</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </main>
+ 
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CURSO GIT E GITHUB</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="aulas.css" />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <div class="header">
+      <!-- coloquei classe pra poder estilizar melhor -->
+      <div class="logo">
+        <strong>Como funciona o Git e GitHub</strong>
+      </div>
+
+      <!-- NAVBAR -->
+      <div class="links">
+        <a href="home.html" class="link">Home</a>
+        <a href="aulas.html" class="link">Aulas</a>
+        <a href="atividades.html" class="link">Atividades</a>
+
+        <div class="progress">✔ <span id="progresso">0</span>%</div>
+      </div>
+    </div>
+
+    <!-- CONTAINER PRINCIPAL -->
+    <div class="container">
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <!-- SEÇÃO VIDEO GITHUB -->
+        <div class="accordion-section">
+          <div class="accordion-header" onclick="toggleAccordion(this)">
+            <span class="accordion-toggle">▼</span>
+            Introdução ao curso
+          </div>
+          <div class="accordion-content">
+            <div class="aula ativa" onclick="trocarVideo('video1', event)">
+              <div>
+                O que é o GitHub?
+                <span>10:24</span>
+              </div>
+            </div>
+
+            <div class="aula" onclick="trocarVideo('video2', event)">
+              <div>
+                Como usar o GitHub Desktop
+                <span>15:30</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SEÇÃO VIDEO GIT BASH -->
+        <div class="accordion-section">
+          <div class="accordion-header" onclick="toggleAccordion(this)">
+            <span class="accordion-toggle">▼</span>
+            O que é Git bash?
+          </div>
+          <div class="accordion-content">
+            <div class="aula" onclick="trocarVideo('video3', event)">
+              <div>
+                introdução ao Git bash
+                <span>22:15</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- CONTEÚDO -->
+      <main class="content">
+        <!-- TABS -->
+        <div class="tabs">
+          <button class="active" data-tab="video" onclick="mostrarTab('video')">
+            ▶ Videoaula
+          </button>
+          <button data-tab="flashcards" onclick="mostrarTab('flashcards')">
+            📚 Flashcards
+          </button>
+        </div>
+
+        <!-- ÁREA DO VÍDEO -->
+        <div id="video">
+          <div class="player">
+            <!-- ALTERADO: removi height fixo do HTML (CSS controla melhor) -->
+            <iframe
+              id="player"
+              src="https://www.youtube.com/embed/6Czd1Yetaac?enablejsapi=1"
+              frameborder="0"
+              allow="autoplay; encrypted-media; picture-in-picture"
+              allowfullscreen
+            >
+            </iframe>
+          </div>
+        </div>
+
+        <!-- botão de concluir aula -->
+        <div class="acoes">
+          <button id="concluirAula" onclick="concluirAula()">
+            Concluir Aula
+          </button>
+        </div>
+
+        <!-- CAPÍTULOS (timestamps) -->
+        <div class="chapters">
+          <ul id="chaptersList"></ul>
+        </div>
+
+        <!-- FLASHCARDS -->
+        <div id="flashcards" style="display: none">
+          <div class="flashcard-container">
+            <div class="card" id="flashcard">
+              <div class="inner">
+                <div class="front">
+                  <h2 id="flashcard-question">Flashcards</h2>
+                </div>
+                <div class="back">
+                  <p id="flashcard-answer">Toque para virar</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flashcard-controls">
+            <button id="prevFlashcard" onclick="prevFlashcard()">←</button>
+            <span id="flashcardCounter">0 / 0</span>
+            <button id="nextFlashcard" onclick="nextFlashcard()">→</button>
+            <button id="flipFlashcard" onclick="flipFlashcard()">Virar</button>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="tela03.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+  </body>
+</html>

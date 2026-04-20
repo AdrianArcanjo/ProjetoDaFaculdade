@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LearnFlow – Cadastro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="cadastro.css">
+    </head>
+
+<body>
+  <div class="bg-orbs">
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="orb orb3"></div>
+  </div>
+ 
+  <div class="page">
+    <!-- Esquerda -->
+    <div class="left">
+      <a href="/Acesso/login.html" class="logo">
+        <div class="logo-icon">L</div>
+        <span class="logo-text">LearnFlow</span>
+      </a>
+ 
+      <div class="hero">
+        <div class="hero-tag">Comece gratuitamente</div>
+        <h1>Você está a um passo de iniciar sua <span>carreira profissional</span></h1>
+        <p>Acesse milhares de cursos e pratique com Flashcards inteligentes para acelerar seu aprendizado.</p>
+ 
+        <div class="features">
+          <div class="feature-item">
+            <div class="feature-icon">🎬</div>
+            Videoaulas com instrutores especializados
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">🃏</div>
+            Flashcards inteligentes por aula
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">📈</div>
+            Acompanhe seu progresso em tempo real
+          </div>
+        </div>
+      </div>
+ 
+      <div class="left-footer">© 2026 LearnFlow Inc. Todos os direitos reservados.</div>
+    </div>
+ 
+    <!-- Direita -->
+    <div class="right">
+      <div class="card">
+        <div class="card-header">
+          <h2>Inicie sua jornada</h2>
+          <p>Crie sua conta gratuitamente em segundos.</p>
+        </div>
+ 
+        <form action="/Acesso/login.html" method="get">
+          <div class="field">
+            <label>Nome completo</label>
+            <input type="text" name="nomeCompleto" placeholder="Seu nome aqui">
+          </div>
+          <div class="field">
+            <label>Email</label>
+            <input type="email" name="email" placeholder="seu@email.com">
+          </div>
+          <div class="field">
+            <label>Senha</label>
+            <input type="password" name="senha" placeholder="Mínimo 8 caracteres" id="senhaInput">
+            <div class="strength-bar">
+              <div class="strength-seg" id="s1"></div>
+              <div class="strength-seg" id="s2"></div>
+              <div class="strength-seg" id="s3"></div>
+              <div class="strength-seg" id="s4"></div>
+            </div>
+          </div>
+          <div class="field">
+            <label>Confirmar senha</label>
+            <input type="password" name="confSenha" placeholder="Repita a senha">
+          </div>
+ 
+          <button type="submit" class="btn-primary">Criar minha conta →</button>
+          <p class="terms">Ao criar uma conta você concorda com os <a href="#">Termos de Uso</a> e <a href="#">Política de Privacidade</a>.</p>
+        </form>
+ 
+        <div class="card-footer">
+          Já tem uma conta? <a href="/Acesso/login.html">Entrar agora</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  </body>
+</html>
